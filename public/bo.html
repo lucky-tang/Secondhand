@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 900px;
+            height: 300px;
+            overflow: hidden;
+            margin: 200px auto;
+            /* transition: all .5s; */
+        }
+
+        .box li {
+            /* position: relative; */
+            float: left;
+            width: 200px;
+            height: 200px;
+            transition: all .3s;
+        }
+
+
+        /* 停在box上，出现两个效果：
+          1.其他的li变成100px
+          2.鼠标所在的那个li变成500px
+        */
+        .box:hover li {
+            /* 停在box中 */
+            width: 100px;
+        }
+
+        .box li:hover {
+            /* 停在li中 */
+            width: 500px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <img src="../assets/1.jpg" alt />
+            </li>
+            <li>
+                <img src="../assets/1.jpg" alt />
+            </li>
+            <li>
+                <img src="../assets/1.jpg" alt />
+            </li>
+            <li>
+                <img src="../assets/1.jpg" alt />
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

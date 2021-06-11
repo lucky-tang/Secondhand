@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="shine">Get early access</p>
+</body>
+
+</html>
+<style>
+    html{
+        background-color: rgb(19, 16, 16);
+    }
+    .shine {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 12px 28px;
+        color: red;
+        background: linear-gradient(to right, #e0f3f2 0, rgb(60, 196, 80) 10%, #f3f8f8 20%);
+        /* 文字之外的clip（剪辑）掉 */
+        -webkit-background-clip: text;
+        /* 设置文字背景为透明（text-fill-color）；文字之外的背景剪辑（background-clip）掉，添加动画（animation+@keyframes） */
+        /* 
+        text-fill-color:定义文字填充颜色，若同时设置text-fill-color和color，text-fill-color定义的颜色将覆盖color属性
+        */
+        -webkit-text-fill-color: transparent;
+        animation: shine 3s linear infinite;
+        font-weight: 600;
+        font-size: 30px;
+        /* 不换行 */
+        white-space: nowrap;
+    }
+
+    @keyframes shine {
+        0% {
+            /* background-position:确定背景所在位置 */
+            background-position: 0px;
+        }
+
+        60% {
+            background-position: 180px;
+
+        }
+
+        100% {
+            background-position: 280px;
+        }
+    }
+</style>
+
+
